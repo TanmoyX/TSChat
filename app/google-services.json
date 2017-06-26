@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "289395856395",
-    "firebase_url": "https://tschat-74beb.firebaseio.com",
-    "project_id": "tschat-74beb",
-    "storage_bucket": "tschat-74beb.appspot.com"
+    "project_number": "358601229033",
+    "firebase_url": "https://tschat-1bf87.firebaseio.com",
+    "project_id": "tschat-1bf87",
+    "storage_bucket": "tschat-1bf87.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:289395856395:android:b1069e8de9e49a22",
+        "mobilesdk_app_id": "1:358601229033:android:b1069e8de9e49a22",
         "android_client_info": {
           "package_name": "com.tanmoy.tschat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "289395856395-u0cd557ukoicmbkbt1pk61gao19vnubp.apps.googleusercontent.com",
+          "client_id": "358601229033-54ime5nuq1i0bpipqkuls2hsc5dqspu6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyApw4X3Yr_PtX5yxhgTAhUeJLKpDVfjbWM"
+          "current_key": "AIzaSyAb2w1MSzEk06KH6vAT8zF2n2SeokqvxmY"
         }
       ],
       "services": {
