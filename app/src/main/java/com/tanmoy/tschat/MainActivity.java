@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
 
         request_user_name();
-
+//
         add_room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
