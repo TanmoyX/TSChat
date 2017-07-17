@@ -3,9 +3,11 @@ package com.tanmoy.tschat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -49,11 +51,13 @@ public class Chat_Room  extends AppCompatActivity {
     private String user_name,room_name;
     private DatabaseReference root ;
     private String temp_key;
+    private ScrollView mScrollView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_room);
+        mScrollView = (ScrollView) findViewById(R.id.scrollView);
 
         btn_send_msg = (Button) findViewById(R.id.btn_send);
         input_msg = (EditText) findViewById(R.id.msg_input);
@@ -87,13 +91,14 @@ public class Chat_Room  extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
                 append_chat_conversation(dataSnapshot);
+                scrollToBottom();
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
                 append_chat_conversation(dataSnapshot);
-
+                scrollToBottom();
             }
 
             @Override
@@ -129,5 +134,15 @@ public class Chat_Room  extends AppCompatActivity {
         }
 
 
+    }
+    private void scrollToBottom()
+    {
+        mScrollView.post(new Runnable()
+        {
+            public void run()
+            {
+                mScrollView.smoothScrollTo(0,  chat_conversation.getBottom());
+            }
+        });
     }
 }
